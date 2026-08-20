@@ -1,0 +1,122 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho {
+    padding: 15px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(46, 5, 197);
+    position: relative;
+}
+.cabecalho nav {
+    position: absolute;
+    right: 25px;
+}
+.botao-inicio {
+    background-color: white;
+    color: #0004f0;
+    padding: 8px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.cartao{
+    width: 260px;
+    height: 260px;
+    perspective: 1000px;
+}
+
+.cartao-imagem {
+    width: 100%;
+    max-height: 140px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Era min-width */
+    background-color: white;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h2 {
+    margin-bottom: 20px;
+}
+.cabecalho-link{
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    color: white;
+    font-size: 18px;
+}
+
+footer{
+    background-color: rgb(22, 7, 240);
+    padding: 15px 25px;
+}
+
+.cartao-interno {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: 0.8s;
+    transform-style: preserve-3d;
+}
+.cartao:hover .cartao-interno{
+    transform: rotateY(180deg);
+
+}
+.cartao-frente,
+.cartao-verso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+}
+.cartao-frente {
+    transform: rotateY(0deg);
+}
+.cartao-verso{
+    transform: rotateY(180deg);
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(4, 260px);
+    gap: 20px;
+}
+
+footer {
+    background-color: (240, 7, 135);
+    padding: 15px 25px;
+    text-align: center;
+}
